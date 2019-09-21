@@ -1,0 +1,4 @@
+2019-09-21 21:09:05,216 - <ipython-input-4-a7a793a09af4>:17 - tst - first info message
+2019-09-21 21:09:05,218 - <ipython-input-4-a7a793a09af4>:18 - tst - first debug message
+2019-09-21 21:22:08,853 - main - INFO - test main logger
+2019-09-21 21:22:08,853 - main - INFO - start import module 'mod'...
