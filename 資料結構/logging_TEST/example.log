@@ -1,0 +1,11 @@
+2019/09/22 21:13:51 - testLogger - CRITICAL - logger critical message.
+2019/09/22 21:13:51 - testLogger - ERROR - logger error message
+2019/09/22 21:13:51 - testLogger - WARNING - logger warning message
+2019/09/22 21:13:51 - testLogger - INFO - logger info message
+2019/09/22 21:13:51 - testLogger - DEBUG - logger debug message
+2019/09/22 21:14:09 - testLogger - CRITICAL - logger critical message.
+2019/09/22 21:14:09 - testLogger - ERROR - logger error message
+2019/09/22 21:14:09 - testLogger - WARNING - logger warning message
+2019/09/22 21:14:09 - testLogger - INFO - logger info message
+2019/09/22 21:14:09 - testLogger - DEBUG - logger debug message
+2019/09/22 21:21:46 - testLogger - INFO - this is test logger info
