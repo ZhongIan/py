@@ -33,6 +33,9 @@ class ThreadPoolHandler(EventHandler):
         self.signal_done_sock.send(b'x')
     
     # run() 方法被用来将工作提交给回调函数池，处理完成后被激发
+    # 实际工作被提交给 ThreadPoolExecutor 实例
+    # self.pool = ThreadPoolExecutor(nworkers)
+    # 当线程池完成工作后，它会执行类中的 _complete() 方法
     # Run a function in a thread pool
     def run(self, func, args=(), kwargs={},*,callback):
         r = self.pool.submit(func, *args, **kwargs)

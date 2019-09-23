@@ -13,5 +13,3 @@ class TimeHandler(BaseRequestHandler):
 if __name__ == '__main__':
     serv = UDPServer(('', 20000), TimeHandler)
     serv.serve_forever()
-
-

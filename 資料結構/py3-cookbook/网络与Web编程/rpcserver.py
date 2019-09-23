@@ -1,5 +1,7 @@
 
 import pickle
+
+
 class RPCHandler:
     def __init__(self):
         self._functions = { }
@@ -20,6 +22,12 @@ class RPCHandler:
                     connection.send(pickle.dumps(e))
         except EOFError:
              pass
+            
+            
+# 要使用这个处理器，你需要将它加入到一个消息服务器中。
+# 你有很多种选择，但是使用 multiprocessing 库是最简单的。
+# 下面是一个RPC服务器例子：            
+            
             
 from multiprocessing.connection import Listener
 from threading import Thread

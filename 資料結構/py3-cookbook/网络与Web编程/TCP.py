@@ -1,6 +1,3 @@
-
-# 網路 11.2
-
 from socketserver import BaseRequestHandler, TCPServer
 
 class EchoHandler(BaseRequestHandler):
@@ -16,12 +13,3 @@ class EchoHandler(BaseRequestHandler):
 if __name__ == '__main__':
     serv = TCPServer(('', 20000), EchoHandler)
     serv.serve_forever()
-
-
-
-
-
-
-
-
-

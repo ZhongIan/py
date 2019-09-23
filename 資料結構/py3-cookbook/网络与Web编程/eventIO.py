@@ -1,4 +1,7 @@
 
+# ======= 事件处理器 =========
+# 基本事件处理器方法的基类
+
 class EventHandler:
     def fileno(self):
         'Return the associated file descriptor'
@@ -20,6 +23,10 @@ class EventHandler:
         'Send outgoing data'
         pass
     
+
+# ============ 事件循环 =============
+# 放入类似下面这样的事件循环中：    
+    
 import select
 
 def event_loop(handlers):
@@ -31,7 +38,18 @@ def event_loop(handlers):
             h.handle_receive()
         for h in can_send:
             h.handle_send()
+
+# 关键部分是 select() 调用，它会不断轮询文件描述符从而激活它     
+# 在调用 select() 之前，事件循环会询问所有的处理器来决定哪一个想接受或发生
+# 然后它将结果列表提供给 select()
+# 然后 select() 返回准备接受或发送的对象组成的列表
+# 然后相应的 handle_receive() 或 handle_send() 方法被触发
             
+
+# ========= 基于UDP网络 ============
+# 创建(繼承) EventHandler 的实例
+# 調用 event loop    
+
 import socket
 import time
 
