@@ -1,6 +1,4 @@
-
 import time
-
 class CountdownTask:
     def __init__(self):
         self._running = True
@@ -19,5 +17,5 @@ c = CountdownTask()
 from threading import Thread
 t = Thread(target=c.run, args=(10,))
 t.start()
-c.terminate() # Signal termination
-t.join()      # Wait for actual termination (if needed)
+c.terminate() # Signal termination 信號終止
+t.join()      # Wait for actual termination (if needed) 實際停止

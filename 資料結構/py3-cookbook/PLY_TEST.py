@@ -1,3 +1,4 @@
+
 from ply.lex import lex
 from ply.yacc import yacc
 
@@ -78,4 +79,3 @@ def p_error(p):
     print('Syntax error')
 
 parser = yacc()
-
