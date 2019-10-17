@@ -1,0 +1,10 @@
+
+import logging
+log = logging.getLogger(__name__)
+log.addHandler(logging.NullHandler())
+
+# Example function (for testing)
+def func():
+    print('--- in somelib.func() ---')
+    log.critical('A Critical Error!')
+    log.debug('A debug message')
