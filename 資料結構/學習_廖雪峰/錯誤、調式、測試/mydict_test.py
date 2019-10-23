@@ -32,3 +32,8 @@ class TestDict(unittest.TestCase):
         with self.assertRaises(AttributeError):
             value = d.empty
             
+# 若無 if __name__ == '__main__': 則使用 
+# !python -m unittest mydict_test
+# 可批量运行很多单元测试
+if __name__ == '__main__':
+    unittest.main()
