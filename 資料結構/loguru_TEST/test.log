@@ -1,0 +1,176 @@
+2020-05-13 06:28:17.488 | DEBUG    | __main__:<module>:4 - this is a debug
+2020-05-13 06:28:41.204 | DEBUG    | __main__:<module>:4 - this is a debug message
+2020-05-13 06:28:41.206 | DEBUG    | __main__:<module>:6 - this is another debug message
+2020-05-13 06:28:41.207 | DEBUG    | __main__:<module>:7 - this is another debug message2
+2020-05-13 06:28:41.208 | DEBUG    | __main__:<module>:8 - this is another debug message3
+2020-05-13 06:40:35.810 | ERROR    | __main__:<module>:1 - An error has been caught in function '<module>', process 'MainProcess' (29936), thread 'MainThread' (132):
+Traceback (most recent call last):
+
+  File "D:\anaconda\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+                ¢| ModuleSpec(name='ipykernel.__main__', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000023171AB1518>, orig...
+
+  File "D:\anaconda\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+         ¢x     ¢| {'__name__': '__main__', '__doc__': None, '__package__': 'ipykernel', '__loader__': <_frozen_importlib_external.SourceFileLoa...
+         ¢| <code object <module> at 0x0000023171A685D0, file "D:\anaconda\lib\site-packages\ipykernel\__main__.py", line 1>
+
+  File "D:\anaconda\lib\site-packages\ipykernel\__main__.py", line 3, in <module>
+    app.launch_new_instance()
+    ¢x   ¢| <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    ¢| <module 'ipykernel.kernelapp' from 'D:\\anaconda\\lib\\site-packages\\ipykernel\\kernelapp.py'>
+
+  File "D:\anaconda\lib\site-packages\traitlets\config\application.py", line 658, in launch_instance
+    app.start()
+    ¢x   ¢| <function IPKernelApp.start at 0x0000023173C7AF28>
+    ¢| <ipykernel.kernelapp.IPKernelApp object at 0x000002316FC7C390>
+
+  File "D:\anaconda\lib\site-packages\ipykernel\kernelapp.py", line 486, in start
+    self.io_loop.start()
+    ¢x    ¢x       ¢| <function BaseAsyncIOLoop.start at 0x0000023173375D08>
+    ¢x    ¢| <tornado.platform.asyncio.AsyncIOMainLoop object at 0x0000023173C8CC88>
+    ¢| <ipykernel.kernelapp.IPKernelApp object at 0x000002316FC7C390>
+
+  File "D:\anaconda\lib\site-packages\tornado\platform\asyncio.py", line 127, in start
+    self.asyncio_loop.run_forever()
+    ¢x    ¢x            ¢| <function BaseEventLoop.run_forever at 0x0000023173241840>
+    ¢x    ¢| <_WindowsSelectorEventLoop running=True closed=False debug=False>
+    ¢| <tornado.platform.asyncio.AsyncIOMainLoop object at 0x0000023173C8CC88>
+
+  File "D:\anaconda\lib\asyncio\base_events.py", line 422, in run_forever
+    self._run_once()
+    ¢x    ¢| <function BaseEventLoop._run_once at 0x0000023173243D08>
+    ¢| <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "D:\anaconda\lib\asyncio\base_events.py", line 1432, in _run_once
+    handle._run()
+    ¢x      ¢| <function Handle._run at 0x00000231731EBC80>
+    ¢| <Handle BaseAsyncIOLoop._handle_events(928, 1)>
+
+  File "D:\anaconda\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+    ¢x    ¢x          ¢x    ¢| <member '_args' of 'Handle' objects>
+    ¢x    ¢x          ¢| <Handle BaseAsyncIOLoop._handle_events(928, 1)>
+    ¢x    ¢| <member '_callback' of 'Handle' objects>
+    ¢| <Handle BaseAsyncIOLoop._handle_events(928, 1)>
+
+  File "D:\anaconda\lib\site-packages\tornado\platform\asyncio.py", line 117, in _handle_events
+    handler_func(fileobj, events)
+    ¢x            ¢x        ¢| 1
+    ¢x            ¢| <zmq.sugar.socket.Socket object at 0x0000023173CB0800>
+    ¢| <function wrap.<locals>.null_wrapper at 0x0000023173C80EA0>
+
+  File "D:\anaconda\lib\site-packages\tornado\stack_context.py", line 276, in null_wrapper
+    return fn(*args, **kwargs)
+           ¢x   ¢x       ¢| {}
+           ¢x   ¢| (<zmq.sugar.socket.Socket object at 0x0000023173CB0800>, 1)
+           ¢| <bound method ZMQStream._handle_events of <zmq.eventloop.zmqstream.ZMQStream object at 0x0000023173C8C748>>
+
+  File "D:\anaconda\lib\site-packages\zmq\eventloop\zmqstream.py", line 450, in _handle_events
+    self._handle_recv()
+    ¢x    ¢| <function ZMQStream._handle_recv at 0x0000023173380620>
+    ¢| <zmq.eventloop.zmqstream.ZMQStream object at 0x0000023173C8C748>
+
+  File "D:\anaconda\lib\site-packages\zmq\eventloop\zmqstream.py", line 480, in _handle_recv
+    self._run_callback(callback, msg)
+    ¢x    ¢x             ¢x         ¢| [<zmq.sugar.frame.Frame object at 0x0000023173EF08E8>, <zmq.sugar.frame.Frame object at 0x0000023173EF09A0>, <zmq.sugar.frame...
+    ¢x    ¢x             ¢| <function wrap.<locals>.null_wrapper at 0x0000023173DCC598>
+    ¢x    ¢| <function ZMQStream._run_callback at 0x0000023173380510>
+    ¢| <zmq.eventloop.zmqstream.ZMQStream object at 0x0000023173C8C748>
+
+  File "D:\anaconda\lib\site-packages\zmq\eventloop\zmqstream.py", line 432, in _run_callback
+    callback(*args, **kwargs)
+    ¢x         ¢x       ¢| {}
+    ¢x         ¢| ([<zmq.sugar.frame.Frame object at 0x0000023173EF08E8>, <zmq.sugar.frame.Frame object at 0x0000023173EF09A0>, <zmq.sugar.fram...
+    ¢| <function wrap.<locals>.null_wrapper at 0x0000023173DCC598>
+
+  File "D:\anaconda\lib\site-packages\tornado\stack_context.py", line 276, in null_wrapper
+    return fn(*args, **kwargs)
+           ¢x   ¢x       ¢| {}
+           ¢x   ¢| ([<zmq.sugar.frame.Frame object at 0x0000023173EF08E8>, <zmq.sugar.frame.Frame object at 0x0000023173EF09A0>, <zmq.sugar.fram...
+           ¢| <function Kernel.start.<locals>.make_dispatcher.<locals>.dispatcher at 0x0000023173DCC510>
+
+  File "D:\anaconda\lib\site-packages\ipykernel\kernelbase.py", line 283, in dispatcher
+    return self.dispatch_shell(stream, msg)
+           ¢x    ¢x              ¢x       ¢| [<zmq.sugar.frame.Frame object at 0x0000023173EF08E8>, <zmq.sugar.frame.Frame object at 0x0000023173EF09A0>, <zmq.sugar.frame...
+           ¢x    ¢x              ¢| <zmq.eventloop.zmqstream.ZMQStream object at 0x0000023173C8C748>
+           ¢x    ¢| <function Kernel.dispatch_shell at 0x0000023173C612F0>
+           ¢| <ipykernel.ipkernel.IPythonKernel object at 0x0000023173C8CB38>
+
+  File "D:\anaconda\lib\site-packages\ipykernel\kernelbase.py", line 233, in dispatch_shell
+    handler(stream, idents, msg)
+    ¢x       ¢x       ¢x       ¢| {'header': {'msg_id': 'b61f1c125cf449c59a81e4868c1136c1', 'username': 'username', 'session': '792f3bc3f62d418d924cd997f224f4b...
+    ¢x       ¢x       ¢| [b'792f3bc3f62d418d924cd997f224f4b9']
+    ¢x       ¢| <zmq.eventloop.zmqstream.ZMQStream object at 0x0000023173C8C748>
+    ¢| <bound method Kernel.execute_request of <ipykernel.ipkernel.IPythonKernel object at 0x0000023173C8CB38>>
+
+  File "D:\anaconda\lib\site-packages\ipykernel\kernelbase.py", line 399, in execute_request
+    user_expressions, allow_stdin)
+    ¢x                 ¢| True
+    ¢| {}
+
+  File "D:\anaconda\lib\site-packages\ipykernel\ipkernel.py", line 208, in do_execute
+    res = shell.run_cell(code, store_history=store_history, silent=silent)
+          ¢x     ¢x        ¢x                   ¢x                     ¢| False
+          ¢x     ¢x        ¢x                   ¢| True
+          ¢x     ¢x        ¢| 'my_function(0, 0, 0)'
+          ¢x     ¢| <function ZMQInteractiveShell.run_cell at 0x0000023173C74158>
+          ¢| <ipykernel.zmqshell.ZMQInteractiveShell object at 0x0000023173C8CF60>
+
+  File "D:\anaconda\lib\site-packages\ipykernel\zmqshell.py", line 537, in run_cell
+    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)
+                 ¢x                    ¢x               ¢x       ¢| {'store_history': True, 'silent': False}
+                 ¢x                    ¢x               ¢| ('my_function(0, 0, 0)',)
+                 ¢x                    ¢| <ipykernel.zmqshell.ZMQInteractiveShell object at 0x0000023173C8CF60>
+                 ¢| <class 'ipykernel.zmqshell.ZMQInteractiveShell'>
+
+  File "D:\anaconda\lib\site-packages\IPython\core\interactiveshell.py", line 2662, in run_cell
+    raw_cell, store_history, silent, shell_futures)
+    ¢x         ¢x              ¢x       ¢| True
+    ¢x         ¢x              ¢| False
+    ¢x         ¢| True
+    ¢| 'my_function(0, 0, 0)'
+
+  File "D:\anaconda\lib\site-packages\IPython\core\interactiveshell.py", line 2785, in _run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+                  ¢x                       ¢x                ¢| <ExecutionResult object at 23173ef2a20, execution_count=9 error_before_exec=None error_in_exec=None info=<ExecutionInfo objec...
+                  ¢x                       ¢| <IPython.core.compilerop.CachingCompiler object at 0x0000023173CD4128>
+                  ¢| 'all'
+
+  File "D:\anaconda\lib\site-packages\IPython\core\interactiveshell.py", line 2909, in run_ast_nodes
+    if self.run_code(code, result):
+       ¢x    ¢x        ¢x     ¢| <ExecutionResult object at 23173ef2a20, execution_count=9 error_before_exec=None error_in_exec=None info=<ExecutionInfo objec...
+       ¢x    ¢x        ¢| <code object <module> at 0x0000023173EC9A50, file "<ipython-input-9-7d03f1b15a39>", line 1>
+       ¢x    ¢| <function InteractiveShell.run_code at 0x000002317284C7B8>
+       ¢| <ipykernel.zmqshell.ZMQInteractiveShell object at 0x0000023173C8CF60>
+
+  File "D:\anaconda\lib\site-packages\IPython\core\interactiveshell.py", line 2963, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         ¢x         ¢x    ¢x               ¢x    ¢| {'__name__': '__main__', '__doc__': 'Automatically created module for IPython interactive environment', '__package__': None, ...
+         ¢x         ¢x    ¢x               ¢| <ipykernel.zmqshell.ZMQInteractiveShell object at 0x0000023173C8CF60>
+         ¢x         ¢x    ¢| <property object at 0x000002317281C3B8>
+         ¢x         ¢| <ipykernel.zmqshell.ZMQInteractiveShell object at 0x0000023173C8CF60>
+         ¢| <code object <module> at 0x0000023173EC9A50, file "<ipython-input-9-7d03f1b15a39>", line 1>
+
+> File "<ipython-input-9-7d03f1b15a39>", line 1, in <module>
+    my_function(0, 0, 0)
+    ¢| <function my_function at 0x0000023173EBBA60>
+  File "<ipython-input-8-3dce1744837d>", line 4, in my_function
+    return 1 / (x + y + z)
+                ¢x   ¢x   ¢| 0
+                ¢x   ¢| 0
+                ¢| 0
+
+ZeroDivisionError: division by zero
+2020-05-13 06:59:01.628 | DEBUG    | __main__:<module>:5 - test root logger...
+2020-05-13 06:59:01.630 | DEBUG    | __main__:<module>:7 - test main logger
+2020-05-13 06:59:01.631 | INFO     | __main__:<module>:9 - start import module 'mod'...
+2020-05-13 06:59:01.651 | INFO     | submod:<module>:5 - logger of submod say something...
+2020-05-13 06:59:01.655 | INFO     | mod:<module>:6 - logger of mod say something...
+2020-05-13 06:59:01.657 | DEBUG    | __main__:<module>:12 - let's test mod.testLogger()
+2020-05-13 06:59:01.658 | INFO     | __main__:<module>:13 - finish test...
+2020-05-13 07:06:05.491 | DEBUG    | __main__:<module>:5 - test root logger...
+2020-05-13 07:06:05.506 | DEBUG    | __main__:<module>:7 - test main logger
+2020-05-13 07:06:05.510 | INFO     | __main__:<module>:9 - start import module 'mod'...
+2020-05-13 07:06:05.512 | DEBUG    | __main__:<module>:12 - let's test mod.testLogger()
+2020-05-13 07:06:05.514 | INFO     | __main__:<module>:13 - finish test...
